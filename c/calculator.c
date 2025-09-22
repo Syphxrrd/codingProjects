@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-    // check to see if user input any args
-    if (argc > 1) {
+    // convert the numbers
+    float num1 = atof(argv[2]);
+    float num2 = atof(argv[4]);
+    float num3;
+    if (argc > 1) {   // check to see if user input any args
         // check to see if it was -h
         if (strcmp(argv[1], "-h") == 0) {
             printf("this is just a simple calculator program\n");
@@ -28,8 +32,21 @@ int main(int argc, char *argv[]) {
             printf("25\n");
             return 0;
         } else if (strcmp(argv[1], "-c") == 0) {    // check to see if it was -c
-            // write the rest of the code here i cant finish it rn lol
-            return 0
+            if (strcmp(argv[3], "+") == 0) {
+                num3 = num1 + num2;
+            }
+            else if (strcmp(argv[3], "-") == 0) {
+                num3 = num1 - num2;
+            }
+            else if (strcmp(argv[3], "*") == 0) {
+                num3 = num1 * num2;
+            }
+            else if (strcmp(argv[3], "/") == 0) {
+                num3 = num1 / num2;
+            }
+            printf("The answer is %f", num3);
+            return 0;
         }
     }
+    printf("yo do -h");
 }
