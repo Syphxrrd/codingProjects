@@ -14,9 +14,8 @@ int main(int argc, char *argv[]) {
             printf("./calculator -c 5 + 5\n");
             printf("-ch / displays the -c help menu\n");
             printf("./calculator -ch\n");
-        }
-        // check to see if it was -ch
-        if (strcmp(argv[1], "-ch") == 0) {
+            return 0;
+        } else if (strcmp(argv[1], "-ch") == 0) {   // check to see if it was -ch
             printf("this is how to use the -ch flag\n");
             printf("the first input is the first number\n");
             printf("./calculator -c *5* + 5\n");
@@ -27,6 +26,10 @@ int main(int argc, char *argv[]) {
             printf("so when you run this command, it will return the right value\n");
             printf("./calculator -c 5 * 5\n");
             printf("25\n");
+            return 0;
+        } else if (strcmp(argv[1], "-c") == 0) {    // check to see if it was -c
+            // write the rest of the code here i cant finish it rn lol
+            return 0
         }
     }
 }
