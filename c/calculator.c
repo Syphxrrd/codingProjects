@@ -26,7 +26,7 @@ int math(double num1, double num2, int operation) {
             }
         default:
             printf("Invalid Operator");
-            return 0;
+            return 1;
     }
 }
 
